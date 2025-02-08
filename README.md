@@ -12,8 +12,8 @@
 </div>
 
 ## Benefits of using this cli
-> 1. Adds the `--insert_only` flag to the loaddata command, which filters existing database records from the fixture and leaves only new records to insert, thereby preventing overwriting of field values (which may have been changed by the user) in existing records when loaddata is run again.
-> 2. Adds the `--check_fields` flag, which performs the same functions as the `--insert_only` flag, but additionally remembers the current fields of the loaded table when the fixture is loaded for the first time, so that when adding a new field to the table and restarting loaddata, only the records from the fixture for these new fields are successfully installed, the old fields will not be changed.
+1. Adds the `--insert_only` flag to the loaddata command, which filters existing database records from the fixture and leaves only new records to insert, thereby preventing overwriting of field values (which may have been changed by the user) in existing records when loaddata is run again.
+2. Adds the `--check_fields` flag, which performs the same functions as the `--insert_only` flag, but additionally remembers the current fields of the loaded table when the fixture is loaded for the first time, so that when adding a new field to the table and restarting loaddata, only the records from the fixture for these new fields are successfully installed, the old fields will not be changed.
 
 ## Install
 1. Install package
