@@ -137,9 +137,7 @@ class Command(loaddata.Command):
             else:
                 super().loaddata(fixture_labels)
         except Exception as exc:
-            # NOTE(Ars): При отсутствии полей в модели из фикстуры райсит:
-            # <class 'django.core.serializers.base.DeserializationError'>
-            logger.warning('Что-то пошло не так: %s \n %s', type(exc), exc)
+            logger.exception('', exc_info=exc)
         finally:
             if self.insert_only or self.check_fields:
                 for file_name in temp_file_names:
